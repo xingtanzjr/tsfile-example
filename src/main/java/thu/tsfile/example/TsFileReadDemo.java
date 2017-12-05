@@ -20,11 +20,11 @@ public class TsFileReadDemo {
 		TsFile tsFile = new TsFile(inputFile);
 
 		ArrayList<Path> paths = new ArrayList<>();
-
+		//  time >= 1502089355159 and time < 1502089357560
 		FilterExpression timeFilter = FilterFactory.and(
 				FilterFactory.gtEq(FilterFactory.timeFilterSeries(), 1502089355159L, true),
 				FilterFactory.ltEq(FilterFactory.timeFilterSeries(), 1502089357560L, false));
-		
+		// axis1pos < 30
 		FilterExpression valueFilter = FilterFactory
 				.ltEq(FilterFactory.floatFilterSeries("root.yanmoji.shenzhen.d1", "axis1pos", FilterSeriesType.VALUE_FILTER), 30f, false);
 		
