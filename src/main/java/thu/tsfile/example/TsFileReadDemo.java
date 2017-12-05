@@ -26,7 +26,7 @@ public class TsFileReadDemo {
 				FilterFactory.ltEq(FilterFactory.timeFilterSeries(), 1502089357560L, false));
 		
 		FilterExpression valueFilter = FilterFactory
-				.ltEq(FilterFactory.floatFilterSeries("root.yanmoji.shenzhen.d1", "axis1pos", FilterSeriesType.VALUE_FILTER), 60f, false);
+				.ltEq(FilterFactory.floatFilterSeries("root.yanmoji.shenzhen.d1", "axis1pos", FilterSeriesType.VALUE_FILTER), 30f, false);
 		
 		paths.add(new Path("root.yanmoji.shenzhen.d1.axis1pos"));
 		long startTimestamp = System.currentTimeMillis();
